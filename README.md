@@ -9,13 +9,21 @@ Components Required
 Component	Quantity
 
 Arduino Uno/Nano	1
+
 IR Remote + IR Receiver	1 set
+
 L298N Motor Driver	1
+
 DC Motor	1
+
 Servo Motor (SG90)	1
+
 Buzzer	1
+
 Traffic Light Module (3 LEDs)	1
+
 Jumper Wires	Several
+
 External Power Supply (9V/12V Battery)	1
 
 
@@ -23,14 +31,24 @@ External Power Supply (9V/12V Battery)	1
 Connection Instructions
 
 IR Receiver OUT	Pin 11	VCC → 5V, GND → GND
+
 L298N IN1	Pin 3	Motor control input 1
+
 L298N IN2	Pin 4	Motor control input 2
+
 L298N ENA	Pin 5 (PWM)	Enable motor speed (HIGH = ON)
+
 Servo Motor	Pin 6	Signal wire to pin 6
+
 Buzzer	Pin 7	Active buzzer
+
 Traffic Light Red	Pin 8	Red LED
+
 Traffic Light Yellow	Pin 9	Yellow LED
+
 Traffic Light Green	Pin 10	Green LED
+
+
 
 
 Teacher’s Notes
@@ -40,6 +58,8 @@ Teacher’s Notes
 - Using a class (SmartHome) helps children think of the house as an object with abilities.
 - Encourage children to experiment with motor speed by changing PWM values on ENA pin.
 - This project demonstrates automation, safety, and structured coding.
+
+
 
 
 
