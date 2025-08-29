@@ -1,5 +1,47 @@
-# IR-Remote-Control-For-Home-Setup.
-This lesson introduces children to building a simple Smart Home System using Arduino. 
+Smart Home System with Arduino and L298N Motor Driver
+
+This lesson introduces children to building a simple Smart Home System using Arduino. The project uses an IR remote control, L298N motor driver for controlling a DC motor, a servo motor for simulating a window, a buzzer as an alarm, and a traffic lights module to simulate driveway signals. This project teaches children about automation, safety, and object-oriented programming concepts in Arduino.
+
+
+
+Components Required
+
+Component	Quantity
+
+Arduino Uno/Nano	1
+IR Remote + IR Receiver	1 set
+L298N Motor Driver	1
+DC Motor	1
+Servo Motor (SG90)	1
+Buzzer	1
+Traffic Light Module (3 LEDs)	1
+Jumper Wires	Several
+External Power Supply (9V/12V Battery)	1
+
+
+
+Connection Instructions
+
+IR Receiver OUT	Pin 11	VCC → 5V, GND → GND
+L298N IN1	Pin 3	Motor control input 1
+L298N IN2	Pin 4	Motor control input 2
+L298N ENA	Pin 5 (PWM)	Enable motor speed (HIGH = ON)
+Servo Motor	Pin 6	Signal wire to pin 6
+Buzzer	Pin 7	Active buzzer
+Traffic Light Red	Pin 8	Red LED
+Traffic Light Yellow	Pin 9	Yellow LED
+Traffic Light Green	Pin 10	Green LED
+
+
+Teacher’s Notes
+
+- The L298N Motor Driver allows Arduino to safely control DC motors with higher current.
+- Always connect the GND of Arduino and L298N together.
+- Using a class (SmartHome) helps children think of the house as an object with abilities.
+- Encourage children to experiment with motor speed by changing PWM values on ENA pin.
+- This project demonstrates automation, safety, and structured coding.
+
+
 
 Arduino Code
 
@@ -80,7 +122,6 @@ class SmartHome {
       }
     }
 };
-
 SmartHome myHome;
 void setup() { Serial.begin(9600); myHome.begin(); }
 void loop() { myHome.handleRemote(); }
